@@ -14,3 +14,51 @@ code {
 .todo-container{
   margin:auto;
 }
+.header{
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+  padding: 10px;
+  font-size: 2rem;
+}
+.page-wrapper{
+  text-align: center;
+}
+.todo-container{
+  padding: 2rem; 
+  width: 100%;
+  max-width: 800px;
+}
+.todo-list{
+  padding:1rem 0;
+}
+.todo-list div{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  background-color: rgb(58, 58, 255);
+  margin-bottom: .5rem;
+  color: #fff;
+  font-size: 20px;
+}
+form{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+}
+input{
+  flex-grow: 2;
+  border: none;
+  height: 35px;
+  padding: 0 1rem;;
+}
+button{
+  box-shadow: 1px white;
+  border:none;
+  background-color: blue;
+  color: #fff;
+  padding: 0 1.5rem;
+}
+.delete-button{
+  border: 1px solid rgb(255, 255, 255);
+}

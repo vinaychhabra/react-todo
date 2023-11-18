@@ -11,7 +11,7 @@ const handleStatus = (ids) => {
   return (
     <div className='todo-list'>
       {todoList.map((list) => (
-        <div style={{textDecoration: strike ? 'line-through' : 'none'}} key={list.id} >{list.value}<button onClick={() => handleDelete(list.id)}>x</button></div>
+        <div style={{textDecoration: strike ? 'line-through' : 'none'}} key={list.id} >{list.value}<button className="delete-button" onClick={() => handleDelete(list.id)}>x</button></div>
       ))}
     </div>
   );
