@@ -1,19 +1,25 @@
 import React, { useState } from "react";
 
-function TodoForm({ updateList }) {
+function TodoForm({ addList }) {
+  const [inputUpdate, setInputUpdate] = useState("");
   const [input, setInput] = useState("");
   const onSubmitHandle = (e) => {
     e.preventDefault();
-    if (input != "") {
+    if (input !== "") {
       const add = {
         id: getRandomInt(),
         value: input,
+        status:false
       };
 
-      updateList(add);
+      addList(add);
       setInput("");
     }
   };
+  const onSubmitHandleUpdate=(e)=>{
+    e.preventDefault();
+
+  }
 
   return (
     <div>
@@ -24,7 +30,16 @@ function TodoForm({ updateList }) {
           placeholder="add to-do"
           onInput={(e) => setInput(e.target.value)}
         />
-        <button>Add</button>
+        <button className="btn">Add</button>
+      </form>
+      <form className="update-form" onSubmit={onSubmitHandleUpdate} style={{display:'none'}}>
+        <input
+          type="text"
+          value={inputUpdate}
+          placeholder="add to-do"
+          onInput={(e) => setInputUpdate(e.target.value)}
+        />
+        <button className="btn">Update</button>
       </form>
     </div>
   );

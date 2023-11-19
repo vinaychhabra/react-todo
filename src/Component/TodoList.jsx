@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function TodoList({ todoList,deleteList }) {
-const [strike,setStrike] = useState(0);
+function TodoList({ todoList,deleteList,updateStatus }) {
+// const [status,setStatus] = useState(0);
 const handleDelete = (ids) => {
     deleteList(ids);
 }
 const handleStatus = (ids) => {
-    deleteList(ids);
+    updateStatus(ids);
 }
   return (
     <div className='todo-list'>
       {todoList.map((list) => (
-        <div style={{textDecoration: strike ? 'line-through' : 'none'}} key={list.id} >{list.value}<button className="delete-button" onClick={() => handleDelete(list.id)}>x</button></div>
+        <div className="list-item" style={{textDecoration: list.status ? 'line-through' : 'none'}} onClick={() => handleStatus(list.id)} key={list.id} >{list.value}<div>
+        {/* <button className='btn edit-button'>Edit</button> */}
+        <button className="btn delete-button" onClick={() => handleDelete(list.id)}>x</button></div></div>
       ))}
     </div>
   );

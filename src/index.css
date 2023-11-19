@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: aliceblue;
 }
 
 code {
@@ -26,13 +27,13 @@ code {
 }
 .todo-container{
   padding: 2rem; 
-  width: 100%;
+  /* width: 100%;npm */
   max-width: 800px;
 }
 .todo-list{
   padding:1rem 0;
 }
-.todo-list div{
+.list-item{
   display: flex;
   justify-content: space-between;
   padding: .5rem 1rem;
@@ -40,6 +41,7 @@ code {
   margin-bottom: .5rem;
   color: #fff;
   font-size: 20px;
+  user-select: none; 
 }
 form{
   display: flex;
@@ -52,7 +54,13 @@ input{
   height: 35px;
   padding: 0 1rem;;
 }
-button{
+input:focus{
+  outline: none;
+}
+form:focus-within { 
+  outline: 1px solid blue 
+}
+.btn{
   box-shadow: 1px white;
   border:none;
   background-color: blue;
@@ -60,5 +68,15 @@ button{
   padding: 0 1.5rem;
 }
 .delete-button{
-  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  font-size: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+.edit-button{
+  background-color: transparent;
+  font-size: 20px;
+  padding: 0;
+  margin-right: 5px;
+  cursor: pointer;
 }
