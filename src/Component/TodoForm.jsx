@@ -23,8 +23,9 @@ function TodoForm({ addList }) {
 
   return (
     <div>
-      <form onSubmit={onSubmitHandle}>
+      <form className="add-form" onSubmit={onSubmitHandle}>
         <input
+     
           type="text"
           value={input}
           placeholder="add to-do"
