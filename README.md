@@ -15,7 +15,7 @@ These instructions will help you set up the project on your local machine for de
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/react-todo-app.git
+    git clone https://github.com/vinaychhabra/react-todo.git
     ```
 
 2. Navigate to the project directory:
