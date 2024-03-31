@@ -1,4 +1,5 @@
-# React Todo App [Live](https://react-todo-dldahip99-vinaychhabras-projects.vercel.app/)
+# React Todo App 
+Have a look - [Live](https://react-todo-dldahip99-vinaychhabras-projects.vercel.app/)
 
 This project is a simple Todo application created with React. It allows users to manage their tasks with ease.
 
